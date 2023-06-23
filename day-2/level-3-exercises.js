@@ -1,12 +1,12 @@
 // 1. 'El amor es lo mejor que hay en este mundo. Algunos encontraron su amor y algunos todavía están buscando su amor'. Cuente el número de palabras amor en esta oración
 
 let sentence = 'El amor es lo mejor que hay en este mundo. Algunos encontraron su amor y algunos todavía están buscando su amor'
-sentence.match(/amor/gi)
+sentence.match(/amor/gi).length
 
 // 2. Usa match() para contar el número de todos los porque en la siguiente oración:'No puedes terminar una oración con porque porque porque es una conjunción'
 
 let sentence2 = 'No puedes terminar una oración con porque porque porque es una conjunción'
-sentence2.match(/porque/gi)
+sentence2.match(/porque/gi).length
 
 /* 3. Limpia el siguiente texto y encuentra la palabra más frecuente (pista, usa replace y expresiones regulares):
 const sentence =

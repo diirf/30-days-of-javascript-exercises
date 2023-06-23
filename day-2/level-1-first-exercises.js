@@ -12,11 +12,11 @@ console.log(challenge.length)
 
 // 4. Cambie todos los caracteres de cadena a letras mayúsculas usando el método toUpperCase()
 
-challenge.toUpperCase()
+challenge = challenge.toUpperCase()
 
 // 5. Cambie todos los caracteres de la cadena a letras minúsculas usando el método toLowerCase()
 
-challenge.toLowerCase()
+challenge = challenge.toLowerCase()
 
 // 6. Corta (segmenta) la primera palabra de la cadena usando el método substr() o substring()
 
@@ -42,11 +42,11 @@ challenge.split(" ")
 // 11. 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon' divide la cadena en la coma y cámbiala a una matriz.
 
 let companies = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
-companies.split(",")
+companies.split(", ")
 
 // 12. Cambie 30 días de JavaScript a 30 días de Python usando el método replace().
 
-challenge.replace('JavaScript','Python')
+challenge = challenge.replace('JavaScript','Python')
 
 // 13. ¿Qué es el carácter en el índice 15 en la cadena '30 días de JavaScript'? Utilice el método charAt().
 

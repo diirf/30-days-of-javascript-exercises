@@ -24,7 +24,7 @@ true === true
 
 undefined === null
 5**5 > 20**50
-false == true
+false === true
 
 /* 5. Calcule primero el resultado de la siguiente expresión de comparación sin usar console.log(). Después de decidir el resultado, confirmelo usando console.log():
     i. 4 > 3
