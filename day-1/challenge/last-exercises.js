@@ -26,12 +26,12 @@ let name2 = 'Indira',
 lastName2 = 'Franchi', 
 civilStatus2 = 'married', 
 countries2 = 'Venezuela/Spain',
-age2 = 31
+age2 = 31;
 
 // 10. Declara dos variables miEdad y tuEdad y asígneles valores iniciales y regístrese en la consola del navegador.
 
 let myAge = 31,
-yourAge = 50
+yourAge = 50;
 
-console.log('I am '+ myAge+ ' years old.')
-console.log('You have '+ yourAge+ ' years old.')
+console.log('I am '+ myAge+ ' years old.');
+console.log('You have '+ yourAge+ ' years old.');
