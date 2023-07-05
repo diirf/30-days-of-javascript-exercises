@@ -91,4 +91,36 @@ console.log(lengthWords)
     x. !(4 === '4')
     xi. No hay 'on' tanto en dragon como en python */
 
+//true
+console.log(4 > 3 && 10 < 12)
 
+//false
+console.log(4 > 3 && 10 > 12)
+
+//true
+console.log(4 > 3 || 10 < 12)
+
+//true
+console.log(4 > 3 || 10 > 12)
+
+//false
+console.log(!(4 > 3))
+
+//true
+console.log(!(4 < 3))
+
+//true
+console.log(!(false))
+
+//false
+console.log(!(4 > 3 && 10 < 12))
+
+//true
+console.log(!(4 > 3 && 10 > 12))
+
+//true
+console.log(!(4 === '4'))
+
+//No hay 'on' tanto en dragon como en python
+//false
+!('dragon'.includes('on') && 'python'.includes('on'))
