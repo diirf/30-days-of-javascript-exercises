@@ -1,7 +1,3 @@
-/* const countries = ["Albania", "Bolivia", "Canada", "Denmark", "Ethiopia", "Finland", "Germany", "Hungary", "Ireland", "Japan", "Kenya"];
-
-const webTechs = ["HTML", "CSS", "JavaScript", "React", "Redux", "Node", "MongoDB"]; */
-
 // 1. Declara un array vacío
 const array = [];
 
@@ -24,7 +20,7 @@ const mixedDataTypes = ['tekila', null, ['one', 'two'], 1500, true, 'poodle', -5
 mixedDataTypesLength = mixedDataTypes.length;
 
 // 6. Declare un variable array de nombre itCompanies y asignarles valores iniciales Facebook, Google, Microsoft, Apple, IBM, Oracle y Amazon
-const itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+const itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
 
 // 7. Imprima el array usando console.log()
 console.log('Companies:', itCompanies);
@@ -33,7 +29,7 @@ console.log('Companies:', itCompanies);
 console.log('Companies length:', itCompanies.length);
 
 // 9. Imprime la primer empresa , la intermedia y la última empresa
-const copyOfItCompanies = itCompanies
+const copyOfItCompanies = itCompanies;
 
 middleCompany = copyOfItCompanies.slice((copyOfItCompanies.length - 1)/2,4);
 firstCompany = copyOfItCompanies.shift();
@@ -42,7 +38,7 @@ lastCompany = copyOfItCompanies.pop();
 // 10. Imprime cada empresa
 for (let i=0; i<= itCompanies.length - 1; i++){
     console.log('Company:', itCompanies[i]);
-}
+};
 
 // 11. Cambie el nombre de cada empresa a mayúsculas uno por uno e imprímalos
 const copyOfCompanies = [];
@@ -58,13 +54,13 @@ copyOfCompanies[6] = itCompanies[6].toUpperCase();
 console.log(copyOfCompanies);
 
 // 12. Imprime el array como una oración: Facebook, Google, Microsoft, Apple, IBM, Oracle y Amazon son grandes empresas de TI
-const orationCompany = ['son grandes empresas de TI']
+const orationCompany = ['son grandes empresas de TI'];
 
 const finalArray = itCompanies.concat(orationCompany);
 finalArray.toString();
 
 // 13. Compruebe si existe una determinada empresa en el array itCompanies. Si existe, retorna la empresa; de lo contrario, retorna la empresa no existe
-let searchCompanyName = prompt('Enter the company name', 'Example: Oracle')
+let searchCompanyName = prompt('Enter the company name', 'Example: Oracle');
 
 itCompanies.includes(searchCompanyName)
 ? console.log(`The company ${searchCompanyName} is in the array`)
@@ -93,11 +89,13 @@ itCompanies.slice(0,3);
 itCompanies.slice(4,7);
 
 // 19. Cortar la empresa o empresas intermedias de TI del array
+itCompanies.slice(Math.floor((itCompanies.length)/2),4);
 
 // 20. Eliminar la primera empresa de TI del array
 itCompanies.shift();
 
 // 21. Eliminar la empresa o empresas intermedias de TI del array
+itCompanies.splice(Math.floor((itCompanies.length)/2),1);
 
 // 22. Elimine la última empresa de TI del array
 itCompanies.pop();

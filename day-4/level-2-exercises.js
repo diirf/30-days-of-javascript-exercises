@@ -1,6 +1,6 @@
 /* 1. Escriba un código que pueda calificar a los estudiantes de acuerdo con sus puntajes:
     i. 80-100, A
-    ii. 70-89, B
+    ii. 70-79, B
     iii. 60-69, C
     iv. 50-59, D
     v. 0-49, F */
@@ -66,7 +66,7 @@ switch (true){
 }
 
 // 3. Compruebe si un día es un día de fin de semana o un día laborable. Su script tomará el día como entrada
-let day = prompt('What day is today?', 'Example: monday').toLowerCase()
+let day = prompt('What day is today?', 'Example: monday').toLowerCase();
 let monday = 'monday';
 let tuesday = 'tuesday';
 let wednesday = 'wednesday';

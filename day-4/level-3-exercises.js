@@ -12,7 +12,7 @@ let may = 'may';
 let june = 'june';
 let july = 'july';
 let august = 'august';
-let days
+let days;
 
 if (month===january || month===march || month===may || month===july || month===august || month===october || month===december){
     days = 31;
@@ -29,7 +29,7 @@ else{
 
 // 2. Escribe un programa que diga el número de días en un mes, ahora considera un año bisiesto
 let monthLeapYear = prompt('Enter a month', 'Example: september').toLowerCase();
-let yearLeapYear
+let yearLeapYear;
 let octoberLeapYear = 'october';
 let septemberLeapYear = 'september';
 let novemberLeapYear = 'november';
@@ -42,7 +42,7 @@ let mayLeapYear = 'may';
 let juneLeapYear = 'june';
 let julyLeapYear = 'july';
 let augustLeapYear = 'august';
-let daysLeapYear
+let daysLeapYear;
 
 if (monthLeapYear === februaryLeapYear){
     yearLeapYear = parseInt(prompt('Enter a year', 'Example:2000'));

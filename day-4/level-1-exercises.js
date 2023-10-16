@@ -13,7 +13,7 @@ else {
 // 2. Compara los valores de myAge y yourAge usando if... else. Según la comparación, registre el resultado en la consola indicando quién es mayor (tú o yo). Utilice prompt(“Ingrese su edad:”) para obtener la edad como entrada.
 let myAge = parseInt(prompt('What is my age?', 'Example: 25'));
 let yourAge = parseInt(prompt('What is your age?', 'Example: 30'));
-let differenceAges = yourAge - myAge
+let differenceAges = yourAge - myAge;
 
 if (differenceAges > 0){
     console.log(`You're ${differenceAges} years older than me`);
