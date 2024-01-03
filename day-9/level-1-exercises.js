@@ -66,8 +66,8 @@ const products = [
 
 const priceByProduct = products.map((product) => {
   product.price = product.price.toString().trim() === "" ? 0 : product.price;
-  return `${product.product} = ${product.price}`
-});
+  return `${product.product} = ${product.price}`;
+})
 
 console.log(priceByProduct);
 

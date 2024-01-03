@@ -2013,6 +2013,27 @@ const countries = [
     }
   ];
 
+// Order by population
+function orderByPopulation(countries){
+  return countries.slice().sort((a, b) => b.population - a.population);
+}
+
+orderByPopulation(countries);
+
+// Order by capital
+function orderByCapital(countries){
+  return countries.slice().sort((a, b) => (a.capital > b.capital) ? 1 : -1);
+}
+
+orderByCapital(countries);
+
+// Order by name
+function orderByName(countries){
+  return countries.slice().sort((a, b) => (a.name > b.name) ? 1 : -1);
+}
+
+orderByName(countries);
+
 /* 2. Encuentre las 10 lenguas más habladas:
 // El resultado debería ser el siguiente
 console.log(mostSpokenLanguages(countries, 10))
@@ -2037,6 +2058,34 @@ console.log(mostSpokenLanguages(countries, 3))
 {country: 'Arabic',count: 25},
 ]``` */
 
+function mostSpokenLanguages(countries, number){
+  const languagesByCountry = countries.reduce((acc, curr) => {
+    curr.languages.forEach(language => {
+    acc[language] = (acc[language] || 0) + 1;
+  });
+    return acc;
+}, {});
+
+const entriesLanguagesByCountry = Object.entries(languagesByCountry);
+
+entriesLanguagesByCountry.sort((a, b) => b[1] - a[1]);
+
+const arrayLanguagesByCountry = [];
+
+for (let i = 0; i < number; i++){
+  const objectLanguage = {
+    language: entriesLanguagesByCountry[i][0],
+    count: entriesLanguagesByCountry[i][1]
+  };
+
+  arrayLanguagesByCountry.push(objectLanguage);
+}
+
+return arrayLanguagesByCountry;
+}
+
+mostSpokenLanguages(countries, 20);
+
 /* 3. Utilice el archivo countries_data.js para crear una función que cree los diez países más poblados
 console.log(mostPopulatedCountries(countries, 10))
 [
@@ -2059,6 +2108,24 @@ console.log(mostPopulatedCountries(countries, 3))
 {country: 'United States of America', population: 323947000}
 ]
 ``` */
+function mostPopulatedCountries(countries, number){
+  const orderByPopulation = countries.slice().sort((a, b) => b.population - a.population);
+
+  const arrayCountryByPopulation = [];
+
+  for (let i = 0; i < number; i++){
+    const objectPopulation = {
+      country: orderByPopulation[i].name,
+      population: orderByPopulation[i].population
+    };
+
+    arrayCountryByPopulation.push(objectPopulation);
+  }
+
+  return arrayCountryByPopulation;
+}
+
+mostPopulatedCountries(countries, 10);
 
 /* 4. Intenta desarrollar un programa que calcule la medida de tendencia central de una muestra(mean, median, mode) y medida de la variabilidad(range, variance, standard deviation). Además de esas medidas, encuentre el mínimo, el máximo, el recuento, el porcentaje y la distribución de frecuencias de la muestra. Puede crear un objeto llamado estadísticas y crear todas las funciones que hacen cálculos estadísticos como método para el objeto estadísticas. Comprueba el resultado que aparece a continuación
 
@@ -2089,3 +2156,162 @@ Mode:  (26, 5)
 Variance:  17.5
 Standard Deviation:  4.2
 Frequency Distribution: [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)] */
+
+const ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26];
+
+const statistics = new Object;
+
+// Count method
+statistics.count = function(array){
+  return array.length;
+}
+
+// Add method
+statistics.add = function(array){
+  let total = 0;
+
+  for (let i = 0; i < array.length; i++){
+    total += array[i];
+  }
+
+  return total;
+}
+
+// Min method
+statistics.min = function(array){
+  let minimun = array[0];
+  
+  array.forEach((element) => {
+    if (element < minimun){
+      minimun = element;
+    }
+  });
+
+  return minimun;
+}
+
+// Max method
+statistics.max = function(array){
+  const maximun = array.reduce((acc, curr) => curr > acc ? curr : acc ,0);
+
+  return maximun;
+}
+
+// Range method
+statistics.range = function(array){
+  const orderedArray = array.slice().sort((a,b) => a - b);
+  const rangeValue = orderedArray[orderedArray.length - 1] - orderedArray[0];
+
+  return rangeValue;
+}
+
+// Mean method
+statistics.mean = function(array){
+  return Math.round(this.add(array) / this.count(array));
+}
+
+// Median method
+statistics.median = function(array){
+  const sortedArray = array.slice().sort((a, b) => a - b);
+  let middleValue;
+
+  if (this.count(sortedArray) % 2 === 0){
+    middleValue = (sortedArray[this.count(sortedArray) / 2] + sortedArray[(this.count(sortedArray) / 2) - 1]) / 2;
+  }
+  else{
+    middleValue = sortedArray[Math.floor(this.count(sortedArray) / 2)];
+  }
+
+  return middleValue;
+}
+
+// Mode method
+statistics.mode = function(array){
+  const frequency = array.reduce((acc, curr) => {
+    acc[curr] = (acc[curr] || 0) + 1;
+
+    return acc;
+  },{});
+  
+  const frequencyArray = Object.entries(frequency);
+
+  frequencyArray.sort((a, b) => b[1] - a[1]);
+
+  let modeObject;
+
+  if (frequencyArray[0][1] !== frequencyArray[1][1]){
+    modeObject = {
+      'mode': +frequencyArray[0][0],
+      'count': +frequencyArray[0][1]
+    };
+  }
+  else{
+    let i = 0;
+    const modeArray = [];
+
+    while (frequencyArray[i][1] === frequencyArray[i+1][1]){
+      modeArray.push(+frequencyArray[i][0]);  
+      i++;
+      if (i === frequencyArray.length - 1){
+        break;
+      }
+    }
+    modeArray.push(+frequencyArray[i][0]);
+
+    modeObject = {
+      'mode': modeArray,
+      'count': +frequencyArray[0][1]
+    };
+  }
+
+  return modeObject;
+}
+
+// Variance method
+statistics.variance = function(array){
+  const addSqrt = array.reduce((acc, curr) => acc + (curr ** 2) ,0);
+  
+  return +((addSqrt - ((this.add(array)) ** 2 / array.length)) / (array.length - 1)).toFixed(2);
+}
+
+// Standard deviation method
+statistics.std = function(array){
+  return +Math.sqrt(this.variance(array)).toFixed(2);
+}
+
+// Frequency distribution method
+statistics.freqDist = function(array){
+  const frequency = array.reduce((acc, curr) => {
+    acc[curr] = (acc[curr] || 0) + 1;
+
+    return acc;
+  },{});
+
+  const arrayFrequency = Object.entries(frequency);
+  
+  arrayFrequency.sort((a, b) => b[1] - a[1])
+
+  return arrayFrequency.map((element) => [(element[1] / array.length) * 100, element[0]]);
+
+}
+
+// Describe method
+statistics.describe = function(array){
+  let description = `Count: ${this.count(array)}
+  Add: ${this.add(array)}
+  Min: ${this.min(array)}
+  Max: ${this.max(array)}
+  Range: ${this.range(array)}
+  Mean: ${this.mean(array)} 
+  Median: ${this.median(array)}
+  Mode: {mode:${this.mode(array).mode}, count:${this.mode(array).count}}
+  Variance: ${this.variance(array)}
+  Standard Deviation: ${this.std(array)}
+  Frequency Distribution: [`;
+  
+  this.freqDist(array).forEach((element) => description += `(${element}), `);
+
+  description = description.substring(0,description.length-2)+']';
+
+  return description;
+}
