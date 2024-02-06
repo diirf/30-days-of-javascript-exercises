@@ -1,0 +1,1 @@
+// 1. Crear una closure que tenga tres funciones internas

@@ -1,0 +1,1 @@
+// 1. Compruebe los requisitos de este proyecto a partir de ambas imágenes (jpg y gif). Todos los datos y el CSS se han implementado utilizando únicamente JavaScript. Los datos se encuentran en la carpeta de inicio del proyecto*3. El botón desplegable se ha creado utilizando el details* elemento HTML.

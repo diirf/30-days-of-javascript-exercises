@@ -1,0 +1,1 @@
+// 1. Crear una closure que tenga una función interna
