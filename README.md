@@ -6,7 +6,7 @@ If you also want to do it, this is the guide with all the content [30 Days Of Ja
 
 Here you can see a preview of my projects and my deployed websites:
 
-- [JS DOM challenge](https://hex-random-colors.onrender.com)
+- [JS DOM challenge](https://js-dom-challenge.onrender.com)
 
 ![JS DOM challenge](/day-21/gif/miniproject21.gif)
 
