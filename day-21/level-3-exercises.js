@@ -70,6 +70,8 @@ updateDate = () =>{
   spanDate.textContent = `${formatedDate} ${formatedHour}`;
 }
 
+updateDate();
+
 spanDate.style.textAlign = 'center';
 spanDate.style.fontSize = '15px';
 spanDate.style.padding = '10px'
