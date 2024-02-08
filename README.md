@@ -1,9 +1,3 @@
----
-runme:
-  id: 01HP5BMWRFAYKQT18K6BCH7FN5
-  version: v2.2
----
-
 ## Solved exercises of the "30 days of JavaScript" challenge
 
 These are my answers from the challenge called *"30 days of JavaScript"* by [Asabeneh Yetayeh](https://github.com/Asabeneh).
