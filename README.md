@@ -18,5 +18,7 @@ Here you can see a preview of my projects and my deployed websites:
    ![Solar system](/day-24/gif/planets.gif)
 - [Countries data](https://worlds-countries-data.onrender.com)
    ![Countries data](/day-25/gif/worldData.gif)
+- [Search countries](https://searching-countries-7yud.onrender.com)
+   ![Countries data](/day-26/gif/searchCountries.gif)
 
 Enjoy it 😄
