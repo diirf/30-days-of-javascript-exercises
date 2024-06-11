@@ -1,0 +1,78 @@
+body{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.title{ 
+    letter-spacing: 10px;
+    font-size: 50px;
+}
+
+.abilities-wrap{
+    display: flex;
+    align-items: center;
+    width: 0 auto;
+    height: 82px;
+    padding: 15px;
+    background-color: #EDDFDE; 
+}
+
+.text-animation{
+    animation: moveRight 2s linear;
+    font-size: 20px;
+    color: #474241;
+}
+
+@keyframes moveRight{
+    0%{
+        opacity: 0.1;
+        transform: translateX(0%);    
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(30px); /* mover hacia la derecha */
+    }
+}
+
+.about-me{
+    line-height: 1.5;
+}
+
+.challenges{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.challenges > div{
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    align-content: center;
+    transition: background-color 0.5s, transform 0.3s;
+}
+
+.challenges > div:hover{
+    background-color: #EDDFDE;
+    transform: scale(1.05);
+    width: 210px;
+}
+
+.techs{
+    font-size: 30px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.techs-animation{
+    animation: transparence 2.5s linear;
+}
+
+@keyframes transparence{
+    0%{
+        opacity: 0.1;   
+    }
+    100% {
+        opacity: 1;
+    }
+}
