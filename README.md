@@ -20,5 +20,7 @@ Here you can see a preview of my projects and my deployed websites:
    ![Countries data](/day-25/gif/worldData.gif)
 - [Search countries](https://searching-countries-7yud.onrender.com)
    ![Countries data](/day-26/gif/searchCountries.gif)
+- [Mini portfolio](https://minii-portfolio.onrender.com)
+   ![Mini portfolio](/day-27/gif/miniPortfolio.gif)
 
 Enjoy it 😄
